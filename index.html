@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumiLex | Number Expression Extraction</title>
+    <meta
+      name="description"
+      content="NumiLex helps extract and classify number expressions such as dates, money, percentages, measurements, quantities, and rankings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="container nav-wrap">
+          <div class="brand" aria-label="NumiLex home">
+            <div class="brand-mark">N</div>
+            <div>
+              <div class="brand-name">NumiLex</div>
+            </div>
+          </div>
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#analyzer">Analyzer</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About Number Expression Extraction</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">Number Expression Extraction</span>
+              <h1>Extract Numbers. Understand Their Meaning.</h1>
+              <p>
+                Identify and classify numerical expressions from unstructured text using explainable NLP patterns.
+              </p>
+              <div class="hero-actions">
+                <a href="#analyzer" class="primary-btn">Start Analyzing</a>
+                <button id="try-example-btn" class="secondary-btn" type="button">Try Example</button>
+              </div>
+            </div>
+            <div class="hero-panel">
+              <div class="mini-panel">
+                <div class="mini-header">
+                  <span class="dot dot-currency"></span>
+                  <span>Detected Patterns</span>
+                </div>
+                <div class="mini-stack">
+                  <div class="mini-item">
+                    <span>₹55,000</span>
+                    <span class="label currency">Currency</span>
+                  </div>
+                  <div class="mini-item">
+                    <span>18.5%</span>
+                    <span class="label percentage">Percentage</span>
+                  </div>
+                  <div class="mini-item">
+                    <span>16GB</span>
+                    <span class="label measurement">Measurement</span>
+                  </div>
+                  <div class="mini-item">
+                    <span>4.5/5</span>
+                    <span class="label ranking">Ranking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="analyzer" class="analyzer-section container">
+          <div class="section-header">
+            <p class="section-kicker">Analyzer</p>
+            <h2>Input text for NLP analysis</h2>
+          </div>
+
+          <div class="analysis-card">
+            <label for="text-input" class="input-label">Enter your text</label>
+            <textarea
+              id="text-input"
+              placeholder="Paste a document, paragraph, review, article, or any text containing numerical expressions..."
+            ></textarea>
+
+            <div class="toolbar-row">
+              <div class="meta-blocks">
+                <span>Words: <strong id="word-count">0</strong></span>
+                <span>Characters: <strong id="char-count">0</strong></span>
+              </div>
+              <div class="button-row">
+                <button id="analyze-btn" class="primary-btn" type="button">Analyze Text</button>
+                <button id="clear-btn" class="soft-btn" type="button">Clear</button>
+                <button id="use-example-btn" class="soft-btn" type="button">Use Example</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="results" class="results-section container hidden">
+          <div class="results-header">
+            <div>
+              <p class="section-kicker">Results</p>
+              <h2>Analysis summary</h2>
+            </div>
+          </div>
+
+          <div id="stats-grid" class="stats-grid"></div>
+
+          <div class="visual-panel">
+            <div class="panel-block">
+              <div class="chart-header">
+                <h3>Number Expressions by Category</h3>
+              </div>
+              <div id="chart" class="chart"></div>
+            </div>
+
+            <div class="panel-block highlighted-block">
+              <div class="chart-header">
+                <h3>Highlighted text</h3>
+              </div>
+              <div id="highlight-legend" class="legend"></div>
+              <div id="highlighted-text" class="highlighted-text"></div>
+            </div>
+          </div>
+
+          <div class="table-card">
+            <div class="table-header">
+              <h3>Extracted expressions</h3>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Expression</th>
+                    <th>Category</th>
+                    <th>Context</th>
+                    <th>Confidence</th>
+                  </tr>
+                </thead>
+                <tbody id="results-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" class="info-section container">
+          <div class="section-header narrow">
+            <p class="section-kicker">How It Works</p>
+            <h2>Rule-based NLP pipeline</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="info-card">
+              <span class="step-index">1</span>
+              <h3>Text Input</h3>
+              <p>Raw user text is accepted from the dashboard and normalized before analysis.</p>
+            </article>
+            <article class="info-card">
+              <span class="step-index">2</span>
+              <h3>Preprocessing</h3>
+              <p>Whitespace is normalized and candidate strings are prepared for linguistic analysis.</p>
+            </article>
+            <article class="info-card">
+              <span class="step-index">3</span>
+              <h3>Numerical Detection</h3>
+              <p>Patterns such as dates, percentages, currency symbols, and measurements are detected.</p>
+            </article>
+            <article class="info-card">
+              <span class="step-index">4</span>
+              <h3>Pattern & Context</h3>
+              <p>Tokens, units, surrounding words, and date context help avoid wrong classifications.</p>
+            </article>
+            <article class="info-card">
+              <span class="step-index">5</span>
+              <h3>Classification</h3>
+              <p>The system assigns each pattern to Quantity, Percentage, Currency, Measurement, Ranking, or Date.</p>
+            </article>
+            <article class="info-card">
+              <span class="step-index">6</span>
+              <h3>Visualization</h3>
+              <p>Results are displayed as highlighted text, summary cards, and a category distribution chart.</p>
+            </article>
+          </div>
+
+          <div class="category-panel">
+            <h3>Supported categories</h3>
+            <div class="category-list">
+              <span class="category-pill quantity">Quantity</span>
+              <span class="category-pill percentage">Percentage</span>
+              <span class="category-pill currency">Currency</span>
+              <span class="category-pill measurement">Measurement</span>
+              <span class="category-pill ranking">Ranking</span>
+              <span class="category-pill date">Date</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="info-section container about-section">
+          <div class="section-header narrow">
+            <p class="section-kicker">About Number Expression Extraction</p>
+            <h2>About the project</h2>
+          </div>
+          <div class="about-copy">
+            <p>
+              NumiLex is a number expression extraction system designed to automatically identify numeric phrases in unstructured text and classify them according to their meaning and context.
+            </p>
+            <p>
+              The application currently supports six categories: Quantity, Percentage, Currency, Measurement, Ranking, and Date. The workflow combines pattern detection, contextual analysis, and explainable rule-based classification to keep decisions transparent and easy to understand.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>

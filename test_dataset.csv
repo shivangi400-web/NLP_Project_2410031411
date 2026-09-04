@@ -1,0 +1,35 @@
+text,expected_category,expected_expression
+"The laptop costs ₹55,000 and has 16GB RAM.",Currency,₹55,000
+"The laptop costs ₹55,000 and has 16GB RAM.",Measurement,16GB
+"The growth rate is 18.5% in the last quarter.",Percentage,18.5%
+"The workshop enrolled 500 students and expanded to 12 countries.",Quantity,500 students
+"The workshop enrolled 500 students and expanded to 12 countries.",Quantity,12 countries
+"The monitor is 15.6 inch and the server runs at 3.2 GHz.",Measurement,15.6 inch
+"The monitor is 15.6 inch and the server runs at 3.2 GHz.",Measurement,3.2 GHz
+"The product ranked 4.5/5 in the review.",Ranking,4.5/5
+"The launch happened on 15 August 2025.",Date,15 August 2025
+"Revenue reached ₹12.5 crore in 2025, with 18.5% growth and 500 employees.",Currency,₹12.5 crore
+"Revenue reached ₹12.5 crore in 2025, with 18.5% growth and 500 employees.",Percentage,18.5%
+"Revenue reached ₹12.5 crore in 2025, with 18.5% growth and 500 employees.",Quantity,500 employees
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Currency,₹12.5 crore
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Quantity,2025
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Percentage,18.5%
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Quantity,500 employees
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Quantity,12 countries
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Measurement,3.2 GHz
+"The company generated ₹12.5 crore revenue in 2025, achieved 18.5% growth, hired 500 employees, and expanded to 12 countries. Its server operates at 3.2 GHz and the product received a 4.5/5 rating on 15 August 2025.",Ranking,4.5/5
+"The report was published in 2025 without a specific date mention.",Quantity,2025
+"Sales increased by 25% this quarter.",Percentage,25%
+"We have 1000 users registered.",Quantity,1000 users
+"The hard drive is 500GB.",Measurement,500GB
+"He ranked 1st in the competition.",Ranking,1st
+"The event is scheduled for 15 December 2025.",Date,15 December 2025
+"USD 5000 was allocated.",Currency,USD 5000
+"The temperature is 37.5°C.",Measurement,37.5°C
+"Approximately 5000 people attended.",Quantity,5000 people
+"The discount is 30%.",Percentage,30%
+"Price dropped $150 from $500.",Currency,$150
+"Price dropped $150 from $500.",Currency,$500
+"The device has 8GB memory.",Measurement,8GB
+"Ranked 5th in the league.",Ranking,5th
+"The meeting is on January 15 2025.",Date,January 15 2025
